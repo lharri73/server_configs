@@ -35,8 +35,9 @@ echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 source ~/.bashrc
 
 sudo dd if=/dev/zero of=/swapfile bs=1024 count=4882812
-sudo mkswap /swapfile
 sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
 exec $SHELL
 
 pyenv install 3.9.9
